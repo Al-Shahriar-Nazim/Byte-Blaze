@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
-
+import { NavLink } from "react-router-dom";
+import ("./Navbar.css")
 const Navbar = () => {
   // theme add
   const [theme, setTheme] = useState("light");
@@ -29,23 +30,23 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li className="font-bold">
+          <ul className="menu menu-horizontal px-1 gap-x-4">
+            <NavLink to={'/'} className="font-bold">
               <a>Home</a>
-            </li>
-            <li className="font-bold">
+            </NavLink>
+            <NavLink to={'/blogs'} className="font-bold">
               <a>Bloges</a>
-            </li>
-            <li className="font-bold">
+            </NavLink>
+            <NavLink to={'/bookmarks'} className="font-bold">
               <a>Bookmarks</a>
-            </li>
+            </NavLink>
           </ul>
           <label className="cursor-pointer grid place-items-center">
             <input
             onChange={handleToggle}
               type="checkbox"
               value="synthwave"
-              className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
+              className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2 mr-4"
             />
             <svg
               className="col-start-1 row-start-1 stroke-base-100 fill-base-100"

@@ -1,11 +1,17 @@
 import "./App.css";
-import Home from "./pages/Home";
+import Blogs from "./pages/Blogs/Blogs";
+import BookMarks from "./pages/Bookmarks/BookMarks";
+import Home from "./pages/Home/Home";
+// import Home from "./pages/Home";
 
 function App() {
   return (
     <>
- 
-     <Home></Home>
+      <div className="container mx-auto">
+        <Home></Home>
+        <Blogs></Blogs>
+        <BookMarks></BookMarks>
+      </div>
     </>
   );
 }
